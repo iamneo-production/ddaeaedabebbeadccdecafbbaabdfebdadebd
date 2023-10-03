@@ -14,11 +14,8 @@
           <security:form-login
         default-target-url="/admin" /> 
     </security:http>
-      <bean id="passwordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder" factory-method="getInstance" />  
- 
- </beans>
 
-    <!-- <security:authentication-manager>
+    <security:authentication-manager>
         <security:authentication-provider>
             <security:user-service>
                 <security:user name="admin" password="nimda" authorities="ROLE_ADMIN" />
@@ -26,6 +23,8 @@
             <!-- Specify a password encoder (in this case, NoOpPasswordEncoder) -->
             <security:password-encoder ref="passwordEncoder" />
         </security:authentication-provider>
-    </security:authentication-manager> -->
+    </security:authentication-manager>
     
-  
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder" factory-method="getInstance" />  
+ 
+ </beans>
